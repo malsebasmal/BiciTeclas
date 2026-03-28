@@ -1,0 +1,24 @@
+---
+import Services from "@components/Services.astro"
+import ServicesOfferts from "@utils/ServicesOfferts";
+
+const [s1, s2, s3, s4, s5] = ServicesOfferts;
+---
+
+<div class="w-full h-full grid grid-cols-3 grid-rows-3 gap-4">
+	<div class="bg-amber-300">
+		<Services styles="bg-amber-300" imageSrc={s1.imageSrc} img={s1.image} title={s1.name} description={s1.description} price={s1.price} />
+	</div>
+	<div class="row-span-2 bg-amber-400">
+		<Services styles="bg-amber-400" imageSrc={s2.imageSrc} img={s2.image} title={s2.name} description={s2.description} price={s2.price} />
+	</div>
+	<div class="row-span-3 bg-amber-500">
+		<Services styles="bg-amber-500" imageSrc={s3.imageSrc} img={s3.image} title={s3.name} description={s3.description} price={s3.price} />
+	</div>
+	<div class="col-start-2 row-start-3 bg-amber-600">
+		<Services styles="bg-amber-600" imageSrc={s4.imageSrc} img={s4.image} title={s4.name} description={s4.description} price={s4.price} />
+	</div>
+	<div class="row-span-2 col-start-1 row-start-2 bg-amber-700">
+		<Services styles="bg-amber-700" imageSrc={s5.imageSrc} img={s5.image} title={s5.name} description={s5.description} price={s5.price} />
+	</div>
+</div>
