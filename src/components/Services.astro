@@ -1,24 +1,33 @@
 ---
 interface Props {
-  styles: string;
-  imageSrc: string;
-  img: string;
+  styles?: string;
+  imageSrcBackground: string;
+  imageIcon: string;
+  iconSize?: number;
   title: string;
   description: string;
   price: string | number;
 }
 
-const { styles, imageSrc, img, title, description, price }= Astro.props;
+const { styles = "", imageSrcBackground, imageIcon, iconSize = 24, title, description, price }= Astro.props;
+
+const scaledIcon = imageIcon
+  .replace(/width="\d+"/, `width="${iconSize}"`)
+  .replace(/height="\d+"/, `height="${iconSize}"`);
 ---
 
-<div
-  class={`${styles} w-full h-full bg-cover p-4`}
-  style={`background-image: url('${imageSrc}')`}
->
-  <h2>{title}</h2>
-  <p>{description}</p>
-  <div>
-    <p>Precio {price} soles</p>
-    <p>sujeto a variaciones</p>
+<div class={`${styles} relative w-full h-full p-4 overflow-hidden`}>
+  <div
+    class="absolute inset-0 bg-cover bg-center -z-10 blur-lg"
+    style={`background-image: url('${imageSrcBackground}')`}
+  ></div>
+  <div class="flex flex-col items-start gap-2">
+    <div class="bg-white p-4 rounded-full" set:html={scaledIcon} />
+    <h2 class="text-4xl font-semibold">{title}</h2>
+    <p class="text-lg font-medium">{description}</p>
+  </div>
+  <div class="w-full flex items-center justify-between">
+    <p class="font-semibold text-2xl">{price}</p>
+    <button class="px-4 py-2 w-40 bg-white text-center rounded-xl">Agendar cita</button>
   </div>
 </div>
