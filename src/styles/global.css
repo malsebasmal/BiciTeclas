@@ -1,1 +1,6 @@
-@import "tailwindcss"
+@import "tailwindcss";
+
+@theme {
+  --color-grayBone: #ededed;
+  --color-blueElectric: #1f3db7;
+}

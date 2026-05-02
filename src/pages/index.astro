@@ -1,16 +1,12 @@
 ---
-import GridServices from 'src/components/GridServices.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import GridServices from '@components/GridServices.astro';
+import Layout from '@layouts/Layout.astro';
+import Title from '@components/Title.astro';
 ---
 
 <Layout>
-	<header class="w-full h-10 bg-red-300">
-		header
-	</header>
-	<main class="w-full h-full p-10">
+	<main class="w-full h-full px-10">
+		<Title />
 		<GridServices />
 	</main>
 	<footer>

@@ -16,18 +16,18 @@ const scaledIcon = imageIcon
   .replace(/height="\d+"/, `height="${iconSize}"`);
 ---
 
-<div class={`${styles} relative w-full h-full p-4 overflow-hidden`}>
-  <div
+<div class={`${styles} relative w-full h-full px-8 py-6 overflow-hidden bg-grayBone border-4 border-blueElectric`}>
+<!--   <div
     class="absolute inset-0 bg-cover bg-center -z-10 blur-lg"
     style={`background-image: url('${imageSrcBackground}')`}
-  ></div>
+  ></div> -->
   <div class="flex flex-col items-start gap-2">
-    <div class="bg-white p-4 rounded-full" set:html={scaledIcon} />
+    <div class="bg-grayBone p-4 rounded-full text-blueElectric border-4 border-blueElectric mb-2" set:html={scaledIcon} />
     <h2 class="text-4xl font-semibold">{title}</h2>
     <p class="text-lg font-medium">{description}</p>
   </div>
   <div class="w-full flex items-center justify-between">
     <p class="font-semibold text-2xl">{price}</p>
-    <button class="px-4 py-2 w-40 bg-white text-center rounded-xl">Agendar cita</button>
+    <button class="px-4 py-2 w-40 bg-blueElectric text-white text-center text-lg font-medium rounded-xl">Agendar Cita</button>
   </div>
 </div>
