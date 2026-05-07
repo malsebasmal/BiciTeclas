@@ -2,6 +2,8 @@
 import GridServices from '@components/GridServices.astro';
 import Layout from '@layouts/Layout.astro';
 import Title from '@components/Title.astro';
+
+const year = new Date().getFullYear();	
 ---
 
 <Layout>
@@ -10,6 +12,6 @@ import Title from '@components/Title.astro';
 		<GridServices />
 	</main>
 	<footer class="w-full text-center px-10 pb-8">
-		© 2023 Biciteclas. Todos los derechos reservados.
+		© {year} Biciteclas. Todos los derechos reservados.
 	</footer>
 </Layout>
