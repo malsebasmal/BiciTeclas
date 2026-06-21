@@ -5,7 +5,7 @@ import ServicesOfferts from "@utils/ServicesOfferts";
 const [s1, s2, s3, s4, s5] = ServicesOfferts;
 ---
 
-<section class="w-full grid grid-cols-3 grid-rows-3 gap-8">
+<section class="w-full grid grid-cols-1 gap-6 xl:grid-cols-3 xl:grid-rows-3 xl:gap-8">
 	<div class="">
 		<Services
 			styles="flex flex-col items-start justify-between gap-4"
@@ -16,7 +16,7 @@ const [s1, s2, s3, s4, s5] = ServicesOfferts;
 			description={s1.description}
 			price={s1.price} />
 	</div>
-	<div class="row-span-2">
+	<div class="xl:row-span-2">
 		<Services
 			styles="flex flex-col items-start justify-end gap-4"
 			imageSrcBackground={s2.imageSrcBackground}
@@ -26,7 +26,7 @@ const [s1, s2, s3, s4, s5] = ServicesOfferts;
 			description={s2.description}
 			price={s2.price} />
 	</div>
-	<div class="row-span-3">
+	<div class="xl:row-span-3">
 		<Services
 			styles="flex flex-col items-center justify-between gap-4"
 			imageSrcBackground={s3.imageSrcBackground}
@@ -36,7 +36,7 @@ const [s1, s2, s3, s4, s5] = ServicesOfferts;
 			description={s3.description}
 			price={s3.price} />
 	</div>
-	<div class="col-start-2 row-start-3">
+	<div class="xl:col-start-2 xl:row-start-3">
 		<Services
 			styles="flex flex-col items-start justify-between gap-4"
 			imageSrcBackground={s4.imageSrcBackground}
@@ -46,7 +46,7 @@ const [s1, s2, s3, s4, s5] = ServicesOfferts;
 			description={s4.description}
 			price={s4.price} />
 	</div>
-	<div class="row-span-2 col-start-1 row-start-2">
+	<div class="xl:row-span-2 xl:col-start-1 xl:row-start-2">
 		<Services
 			styles="flex flex-col items-start justify-between gap-4"
 			imageSrcBackground={s5.imageSrcBackground}
